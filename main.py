@@ -1,10 +1,9 @@
-from __future__ import unicode_literals
-import youtube_dl
+import youtube_dlc
 import os
 
 
 def download(ydl_opts):
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with youtube_dlc.YoutubeDL(ydl_opts) as ydl:
         link = input("Link:\n")
         ydl.download([link])
         menu()
@@ -13,7 +12,7 @@ def download(ydl_opts):
 def update():
     os.system('git checkout master')
     os.system('git pull')
-    os.system('pip install --upgrade youtube-dl')
+    os.system('pip install --upgrade youtube-dlc')
     os.system('gsudo choco upgrade ffmpeg -y')
     os.system('cls')
     menu()
