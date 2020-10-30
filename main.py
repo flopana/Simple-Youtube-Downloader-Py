@@ -36,12 +36,12 @@ def menu():
         download(ydl_opts)
     elif option == 2:
         ydl_opts = {
-            'format': 'best',
+            'format': 'bestvideo+bestaudio/best',
             'outtmpl': 'video/%(title)s.%(ext)s',
-            'postprocessors': [{
-                'key': 'FFmpegVideoConvertor',
-                'preferedformat': 'mp4'
-            }]
+            # 'postprocessors': [{
+            #     'key': 'FFmpegVideoConvertor',
+            #     'preferedformat': 'mp4'
+            # }]
         }
         download(ydl_opts)
     elif option == 3:
