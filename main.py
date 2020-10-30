@@ -20,7 +20,7 @@ def update():
 
 def menu():
     print("1. Download and convert to MP3\n"
-          "2. Download and convert to MP4\n"
+          "2. Just Download\n"
           "3. Update\n")
     option = int(input("Option: "))
     if option == 1:
