@@ -22,8 +22,7 @@ def update():
 def menu():
     print("1. Download and convert to MP3\n"
           "2. Download and convert to MP4\n"
-          "3. Update\n"
-          "4. Exit\n")
+          "3. Update\n")
     option = int(input("Option: "))
     if option == 1:
         ydl_opts = {
@@ -48,8 +47,6 @@ def menu():
         download(ydl_opts)
     elif option == 3:
         update()
-    elif option == 4:
-        exit(0)
     else:
         print("Invalid option!")
         menu()
