@@ -32,7 +32,8 @@ def menu():
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': '192',
-            }]
+            }],
+            'ignoreerrors': True
         }
         download(ydl_opts, link)
     elif option == 2:
@@ -43,14 +44,16 @@ def menu():
             'postprocessors': [{
                 'key': 'FFmpegVideoConvertor',
                 'preferedformat': 'mp4'
-            }]
+            }],
+            'ignoreerrors': True
         }
         download(ydl_opts, link)
     elif option == 3:
         link = input("Link:\n")
         ydl_opts = {
             'format': 'bestvideo+bestaudio/best',
-            'outtmpl': 'video/%(title)s.%(ext)s'
+            'outtmpl': 'video/%(title)s.%(ext)s',
+            'ignoreerrors': True
         }
         download(ydl_opts, link)
     elif option == 4:
